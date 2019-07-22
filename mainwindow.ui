@@ -1,0 +1,638 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1031</width>
+    <height>740</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MVS</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(168, 168, 168);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="labelImage">
+    <property name="geometry">
+     <rect>
+      <x>280</x>
+      <y>19</y>
+      <width>740</width>
+      <height>640</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(216, 216, 216);
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>680</y>
+      <width>461</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(180, 180, 180);
+border-radius: 15px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_FrameNum">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>680</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Sans Serif</family>
+      <pointsize>14</pointsize>
+      <weight>50</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+font: 14pt &quot;Sans Serif&quot;;
+border-radius: 5px;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>680</y>
+      <width>151</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+font: 14pt &quot;Sans Serif&quot;;</string>
+    </property>
+    <property name="text">
+     <string>Frame Number</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>0</y>
+      <width>271</width>
+      <height>661</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(129, 129, 129);</string>
+    </property>
+    <property name="tabShape">
+     <enum>QTabWidget::Triangular</enum>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Connect</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_Disconnect">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>120</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+background-color: rgb(181, 181, 181);
+font: 12pt &quot;Sans Serif&quot;;</string>
+      </property>
+      <property name="text">
+       <string>DisConnect</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_CameraConnect">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;
+font: 14pt &quot;Sans Serif&quot;;
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Connect</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Parameters</string>
+     </attribute>
+     <widget class="QPushButton" name="pushButton_SoftwareTrigger">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>350</y>
+        <width>121</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Soft Trigger</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Inverter">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>140</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Strobe Inverter</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Strobe">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>91</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Strobe</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Gain">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>510</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Gain</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_Gain">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>510</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(244, 255, 170);
+border-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit_exp">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>460</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(244, 255, 170);
+border-radius: 10px;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Exposure">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>460</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Exposure</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_strobe_inverter">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>140</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;background-color: rgb(244, 255, 170);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>False</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>True</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_strobe">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>90</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;background-color: rgb(244, 255, 170);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>True</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>False</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_Acquisition_Mode">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-radius: 10px;background-color: rgb(244, 255, 170);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>SingleFrame</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MultiFrame</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Continuous</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Strobe_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>41</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Acquisition Mode</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Inverter_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Trigger Mode</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_trigger_mode">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>190</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(244, 255, 170);
+border-radius: 10px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>On</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Off</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="comboBox_trigger_source">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>240</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(244, 255, 170);
+border-radius: 10px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Line 0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Line 1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Line 2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Line 3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Counter 0</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Software</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>FrequencyConverter</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Inverter_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>240</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Trigger Source</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_trigger_activation">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>290</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(244, 255, 170);
+border-radius: 10px;</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>RisingEdge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>FallingEdge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LevelHigh</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>LevelLow</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="pushButton_Inverter_4">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>121</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Trigger Activation</string>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_SendValues">
+      <property name="geometry">
+       <rect>
+        <x>2</x>
+        <y>590</y>
+        <width>261</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+background-color: rgb(181, 181, 181);</string>
+      </property>
+      <property name="text">
+       <string>Send</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
