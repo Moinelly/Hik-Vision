@@ -1,5 +1,5 @@
 # Hik-Vision
-QT Code for Hik Vision for Linux
+QT Code for Hik Vision in Linux System
 
 Reruired Tools:
   * QT5
